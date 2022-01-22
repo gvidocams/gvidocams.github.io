@@ -3856,84 +3856,84 @@ const DATORTIKLI = [
     },
     //151 - 160
     {
-        q: "",
-        a1: "",
-        a2: "",
-        a3: "",
-        a4: "",
-        a:
+        q: "Kurš slānis ļauj caurspīdīgi pārsūtīt datus starp komunikācijas galiem, piedāvājot uzticamus datu pārsūtīšanas servisus augšējiem slāņiem?",
+        a1: "1. Fiziskais slānis",
+        a2: "2. Tīkla slānis",
+        a3: "3. Seansu slānis",
+        a4: "4. Transporta slānis",
+        a: 4
     },
     {
-        q: "",
-        a1: "",
-        a2: "",
-        a3: "",
-        a4: "",
-        a:
+        q: "Slānis, kas nosaka iekārtu elektriskās un fizikālās specifikācijas, ir...",
+        a1: "1. Fiziskais slānis",
+        a2: "2. Tīkla slānis",
+        a3: "3. Seansu slānis",
+        a4: "4. Transporta slānis",
+        a: 1
     },
     {
-        q: "",
-        a1: "",
-        a2: "",
-        a3: "",
-        a4: "",
-        a:
+        q: "Kuram OSI modeļa slānim pieder PPTP protokols?",
+        a1: "1. Fiziskais slānis",
+        a2: "2. Tīkla slānis",
+        a3: "3. Seansu slānis",
+        a4: "4. Transporta slānis",
+        a: 3
     },
     {
-        q: "",
-        a1: "",
-        a2: "",
-        a3: "",
-        a4: "",
-        a:
+        q: "Slānis, kas dod funkcionālos līdzekļus, lai pārsūtītu datus starp tīkla komponentēm un lai konstatētu un izlabotu kļūdas, kas var rasties fiziskajā slānī, ir...",
+        a1: "1. Kanālu slānis",
+        a2: "2. Datu posma slānis",
+        a3: "3. Fiziskais slānis",
+        a4: "4. Tīkla slānis",
+        a: 2
     },
     {
-        q: "",
-        a1: "",
-        a2: "",
-        a3: "",
-        a4: "",
-        a:
+        q: "Slānis, kas dod funkcionālas iespējas pārvietot dažāda garuma datu virknes no avota uz galapunktu cauri vienam vai vairākiem tīkliem, ir...",
+        a1: "1. Fiziskais slānis",
+        a2: "2. Tīkla slānis",
+        a3: "3. Seansu slānis",
+        a4: "4. Transporta slānis",
+        a: 2
     },
     {
-        q: "",
-        a1: "",
-        a2: "",
-        a3: "",
-        a4: "",
-        a:
+        q: "Protokols, ar kura palīdzību TCP/IP modelis realizē starptīklu līmeni, ir...",
+        a1: "1. POP3",
+        a2: "2. TCP",
+        a3: "3. IP",
+        a4: "4. FTP",
+        a: 3
     },
     {
-        q: "",
-        a1: "",
-        a2: "",
-        a3: "",
-        a4: "",
-        a:
+        q: "Protokoli, ar kuru palīdzību, TCP/IP modelis realizē transportēšanas līmeni, ir...",
+        a1: "1. FTP un UDP",
+        a2: "2. TCP un IP",
+        a3: "3. IPX un IP",
+        a4: "4. UDP un TCP",
+        a: 4
     },
     {
-        q: "",
-        a1: "",
-        a2: "",
-        a3: "",
-        a4: "",
-        a:
+        q: "Kura ir tīkla slāņa protokolu datu vienība?",
+        a1: "1. Pakete",
+        a2: "2. Bits",
+        a3: "3. Kadrs",
+        a4: "4. Baits",
+        a: 1
     },
     {
-        q: "",
-        a1: "",
-        a2: "",
-        a3: "",
-        a4: "",
-        a:
+        q: "Slānis, kurš veido vienu kopīgo transportēšanas sistēmu vairākiem datoru tīkliem, ir...",
+        a1: "1. Fiziskais slānis",
+        a2: "2. Tīkla slānis",
+        a3: "3. Seansu slānis",
+        a4: "4. Transporta slānis",
+        a: 2
     },
     {
-        q: "",
-        a1: "",
-        a2: "",
-        a3: "",
-        a4: "",
-        a:
+        q: "Kura ir fiziskā slāņa protokolu datu vienība?",
+        a1: "1. Pakete",
+        a2: "2. Bits",
+        a3: "3. Kadrs",
+        a4: "4. Baits",
+        a: 2
     },
     //161 - 170
 ];
