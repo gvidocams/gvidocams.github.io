@@ -3852,7 +3852,7 @@ const DATORTIKLI = [
         a2: "2. Lietotņu slānis",
         a3: "3. Transporta slānis",
         a4: "4. Seansu slānis",
-        a:
+        a: 2
     },
     //151 - 160
     {
@@ -3936,8 +3936,993 @@ const DATORTIKLI = [
         a: 2
     },
     //161 - 170
+    {
+        q: "Kura ir kanālu slāņa protokolu datu vienība?",
+        a1: "1. Pakete",
+        a2: "2. Bits",
+        a3: "3. Kadrs",
+        a4: "4. Baits",
+        a: 3
+    },
+    {
+        q: "Uz kuru OSI slāni attiecas DNS (Domain Name System - domēnu vārdu sistēma)?",
+        a1: "1. Fizisko slāni",
+        a2: "2. Lietotņu slāni",
+        a3: "3. Transporta slāni",
+        a4: "4. Seansu slāni",
+        a: 2
+    },
+    {
+        q: "Cik bitu izmanto IPv4 adresācijai?",
+        a1: "1. 128 bitu",
+        a2: "2. 32 bitu",
+        a3: "3. 64 bitu",
+        a4: "4. 16 bitu",
+        a: 2
+    },
+    {
+        q: "Kāds ir HTTP protokola noklusētais ports?",
+        a1: "1. 25",
+        a2: "2. 80",
+        a3: "3. 21",
+        a4: "4. 23",
+        a: 2
+    },
+    {
+        q: "Kuram OSI modeļa slānim pieder RPC protokols?",
+        a1: "1. Fiziskajam slānim",
+        a2: "2. Seansu slānim",
+        a3: "3. Tīkla slānim",
+        a4: "4. Transporta slānim",
+        a: 2
+    },
+    {
+        q: "Uz kuru OSI modeļa slāni atteicas konektors RJ-45 un terminators BNC?",
+        a1: "1. Kanālu slāni",
+        a2: "2. Datu posma slāni",
+        a3: "3. Fizisko slāni",
+        a4: "4. Tīkla slāni",
+        a: 3
+    },
+    {
+        q: "Slānis, kas nodrošina lietotņu procesiem nepieciešamos tīklošanās pakalpojumus un dod pieprasījumus prezentācijas slānim, ir…",
+        a1: "1. Fiziskais slānis",
+        a2: "2. Lietotņu slānis",
+        a3: "3. Transporta slānis",
+        a4: "4. Seansu slānis",
+        a: 2
+    },
+    {
+        q: "Kurš ir FTP protokola noklusētais ports?",
+        a1: "1. 25",
+        a2: "2. 80",
+        a3: "3. 21",
+        a4: "4. 23",
+        a: 3
+    },
+    {
+        q: "Slānis, kas izveido kontekstu starp lietotņu slāņa programmatūras komponentiem, kuros šīs augstāka līmeņa komponentes var izmantot noteiktu veidu sintaksi un semantiku, ja prezentācijas slānis to saprot abos galos ir...",
+        a1: "1. Fiziskais slānis",
+        a2: "2. Tīkla slānis",
+        a3: "3. Sesiju slānis",
+        a4: "4. Transporta slānis",
+        a: 3
+    },
+    {
+        q: "Kuram OSI modeļa slānim pieder PPP protokols?",
+        a1: "1. Fiziskajam slānim",
+        a2: "2. Seansu slānim",
+        a3: "3. Datu posma slānim",
+        a4: "4. Transporta slānim",
+        a: 3
+    },
+    //171 - 180
+    {
+        q: "Ko nodrošina optiskais kabelis, salīdzinājumā ar 5. kategorijas UTP vītā pāra kabeli?",
+        a1: "1. Lielāku datu drošību, drošumu, pārraides ātrumu",
+        a2: "2. Samazinātas tīkla izveides izmaksas",
+        a3: "3. Ērtāku un vienkāršāku izveidotā tīkla uzturēšanu un pārvaldību",
+        a4: "4. Lielāku datu drošību, bet mazāku datu pārraides ātrumu",
+        a: 1
+    },
+    {
+        q: "Ar pusdupleksās (half-duplex) metodes palīdzību...",
+        a1: "1. Datus var sūtīt un saņemt, bet ne vienlaicīgi",
+        a2: "2. Datus var tikai sūtīt",
+        a3: "3. Datus var tikai saņemt",
+        a4: "4. Datus var vienlaicīgi sūtīt un saņemt  ",
+        a: 1
+    },
+    {
+        q: "Kādi ir tīkla kartes galvenie uzdevumi?",
+        a1: "1. Nodrošināt darbu Internetā un lokālajā tīklā",
+        a2: "2. Saskaņot savas darbības ar citām kartēm tīklā, nodrošināt OSI slāņa darbību",
+        a3: "3. Sagatavot datus pārraidei tīklā, pārraidīt un vadīt tos, pieņemt datus un pārveidot tos",
+        a4: "4. Pārraidīt datus un saņemt datus no tīkla",
+        a: 3
+    },
+    {
+        q: "Cik bitu izmanto IPv6 adresācijai?",
+        a1: "1. 128 bitu",
+        a2: "2. 32 bitu",
+        a3: "3. 64 bitu",
+        a4: "4. 16 bitu",
+        a: 1
+    },
+    {
+        q: `Ko norāda optiskās šķiedras parametrs "multi-mode"?`,
+        a1: "1. Informācija tiek pārraidīta, lietojot vairākus starus",
+        a2: "2. Iespēja pārradīt vairākas datu plūsmas",
+        a3: "3. Sastāv no vairākām dzīslām",
+        a4: "4. Informācija tiek saņemta un pārraidīta vienlaicīgi  ",
+        a: 1
+    },
+    {
+        q: "Kurai grupai pieder dotais tīkls: 192.168.0.0/24?",
+        a1: "1. A",
+        a2: "2. B",
+        a3: "3. C",
+        a4: "4. D",
+        a: 3
+    },
+    {
+        q: "Ar kādu ātrumu tiek pārraidīti dati vienā telefonsarunā?",
+        a1: "1. 8 b/s",
+        a2: "2. 64 Kb/s",
+        a3: "3. 32 Kb/s",
+        a4: "4. 2048 Mb/s",
+        a: 2
+    },
+    {
+        q: "Kurā pārraides veidā tiek kodēts signāls?",
+        a1: "1. BaseBand",
+        a2: "2. BroadBand",
+        a3: "3. CodeBand",
+        a4: "4. Unicode",
+        a: 2
+    },
+    {
+        q: "Kurš ir e-pasta klienta programmas SMTP protokola noklusētais ports?",
+        a1: "1. 25",
+        a2: "2. 80",
+        a3: "3. 21",
+        a4: "4. 23",
+        a: 1
+    },
+    {
+        q: "Kādu interneta standartu izmanto maršrutētājos IP adrešu translēšanai?",
+        a1: "1. NAT",
+        a2: "2. DHCP",
+        a3: "3. UDP",
+        a4: "4. ARP",
+        a: 1
+    },
+    //181 - 190
+    {
+        q: "Kāds serviss nodrošina tīklā esošo datoru sarakstu veidošanu (Windows)?",
+        a1: "1. Computer Browser Service",
+        a2: "2. Frame Relay",
+        a3: "3. TokenRing",
+        a4: "4. WINS",
+        a: 1
+    },
+    {
+        q: "Kāda sistēma nodrošina atbilstību starp domēnu vārdu adresēm un skaitliskajām IP adresēm?",
+        a1: "1. DNS",
+        a2: "2. NIC",
+        a3: "3. WINS",
+        a4: "4. IIS",
+        a: 1
+    },
+    {
+        q: "Kā sauc starpniekserveri, kas atrodas starp klienta lietojumprogrammu un īsto serveri?",
+        a1: "1. Proxy",
+        a2: "2. HUB",
+        a3: "3. DNS",
+        a4: "4. NIC",
+        a: 1
+    },
+    {
+        q: "Ar kuru datortīkla utilītprogrammu var pārbaudīt, vai noteiktais mezgls ir sasniedzams ar ICMP ziņojumiem?",
+        a1: "1. ping",
+        a2: "2. tracert",
+        a3: "3. ipconfig",
+        a4: "4. route",
+        a: 1
+    },
+    {
+        q: "Kāda komanda nodrošina drošu ieeju attālinātajā darba seansā ar citu datoru, strādājot Linux vidē?",
+        a1: "1. ping",
+        a2: "2. route",
+        a3: "3. ssh",
+        a4: "4. ipconfig",
+        a: 3
+    },
+    {
+        q: "Kāda komanda nodrošina drošu failu kopēšanu tīklā, strādājot Linux vidē?",
+        a1: "1. scp",
+        a2: "2. copy",
+        a3: "3. ssh",
+        a4: "4. route",
+        a: 1
+    },
+    {
+        q: "Kāda utilītprogramma ir paredzēta tīkla topoloģijas pētīšanai ar ICMP paku pārraides palīdzību?",
+        a1: "1. ipconfig",
+        a2: "2. ping",
+        a3: "3. traceroute",
+        a4: "4. scan",
+        a: 3
+    },
+    {
+        q: "Kāda komanda meklē ierakstu DNS sistēmā Linux vidē?",
+        a1: "1. find",
+        a2: "2. whois",
+        a3: "3. dns",
+        a4: "4. ping",
+        a: 2
+    },
+    {
+        q: "Kāda komanda pārbauda elektroniska pasta adresi Linux vidē?",
+        a1: "1. scan",
+        a2: "2. vrfy",
+        a3: "3. whois",
+        a4: "4. find",
+        a: 2
+    },
+    {
+        q: "Kāda utilītprogramma paredzēta pieslēgšanai pie attālinātā datora Linux vidē?",
+        a1: "1. ipconfig",
+        a2: "2. dns",
+        a3: "3. whois",
+        a4: "4. telnet",
+        a: 4
+    },
+    //191 - 200
+    {
+        q: "Kāda komanda izveido sesiju ar attālinātu sistēmu Linux vidē?",
+        a1: "1. create",
+        a2: "2. rlogin",
+        a3: "3. traceroute",
+        a4: "4. vrfy",
+        a: 2
+    },
+    {
+        q: "Kāda komanda paredzēta datnes kopēšanai no viena datora uz citu tīklā Linux vidē?",
+        a1: "1. telnet",
+        a2: "2. copy",
+        a3: "3. rcp",
+        a4: "4. route",
+        a: 3
+    },
+    {
+        q: "Kāda komanda paredzēta elektroniskā pasta saņemšanai un sūtīšanai Linux vidē?",
+        a1: "1. pop",
+        a2: "2. smtp",
+        a3: "3. mail",
+        a4: "4. email",
+        a: 3
+    },
+    {
+        q: "Kāda utilītprogramma paredzēta autoatbildei uz e-pastu Linux vidē?",
+        a1: "1. vacation",
+        a2: "2. write",
+        a3: "3. copy",
+        a4: "4. mail",
+        a: 1
+    },
+    {
+        q: "Kāda CSS īpašība tiek izmantota jau nospiesta linka stila izmaiņām?",
+        a1: "1. a:link",
+        a2: "2. a:visited",
+        a3: "3. a:vlink",
+        a4: "4. a:hover",
+        a: 2
+    },
+    {
+        q: `Kādā krāsā būs vārds 'eksāmens'? CSS: .highlight {color: red;} HTML: <span class="highlight">eksāmens</span>`,
+        a1: "1. Sarkans",
+        a2: "2. Violets",
+        a3: "3. Noklusējuma krāsā",
+        a4: "4. Melns",
+        a: 1
+    },
+    {
+        q: "Kādā krāsā būs vārds 'eksāmens' ? CSS: ul li em {color: red;} HTML: <ul><li>eksāmens</li></ul>",
+        a1: "1. Sarkans",
+        a2: "2. Violets",
+        a3: "3. Noklusējuma krāsā",
+        a4: "4. Melns",
+        a: 3
+    },
+    {
+        q: "Kāda CSS īpašība tiek izmantota linka stila izmaiņām?",
+        a1: "1. a:hover",
+        a2: "2. a:visited",
+        a3: "3. a:link",
+        a4: "4. a:vlink",
+        a: 3
+    },
+    {
+        q: "Kurš no css pieslēgšanas stiliem ir pareizs?",
+        a1: `1. @import css("styles.css")`,
+        a2: `2. <link href="styles.css" type="stylesheet">`,
+        a3: `3. <style href="styles.css" />`,
+        a4: `4. @import url("styles.css")`,
+        a: 4
+    },
+    {
+        q: "Kurš no variantiem ietver kļūdu?",
+        a1: "1. p span#text (font-size: 150%;}",
+        a2: "2. p text (font-size: 150%;}",
+        a3: "3. p {font-size: 150%;}",
+        a4: "4. p span {font-size: 150%;}",
+        a: 2
+    },
+    //201 - 210
+    {
+        q: "Kurš CSS kods uzrakstīts pareizi?",
+        a1: "1. <div> {border: 1px solid #ccc;}",
+        a2: "2. div {border: 1px solid #hhh;}",
+        a3: "3. div {border: 1px solid #ccc;}",
+        a4: "4. <div> {border: 1px solid #hhh;}",
+        a: 3
+    },
+    {
+        q: "Kura krāsas piešķiršana ir nepareiza?",
+        a1: "1. color: #aaa;",
+        a2: "2. color: #aaaaaa;",
+        a3: "3. color: #000;",
+        a4: "4. color: #hhh",
+        a: 4
+    },
+    {
+        q: "Kurš tags HTML dokumentā nosaka lapaspuses virsdaļu?",
+        a1: "1. <section>",
+        a2: "2. <nav>",
+        a3: "3. <header>",
+        a4: "4. <html>",
+        a: 3
+    },
+    {
+        q: "Kurš tags HTML dokumentā nosaka atsevišķu elementu sarakstā?",
+        a1: "1. <style>",
+        a2: "2. <th>",
+        a3: "3. <li>",
+        a4: "4. <nav>",
+        a: 3
+    },
+    {
+        q: "Kurš tags HTML dokumentā ietver sevī visu saturu?",
+        a1: "1. <html>",
+        a2: "2. <style>",
+        a3: "3. <tbody>",
+        a4: "4. <td>",
+        a: 1
+    },
+    {
+        q: "Kurš tags HTML dokumentā attēlo grafisko informāciju?",
+        a1: "1. <style>",
+        a2: "2. <p>",
+        a3: "3. <img>",
+        a4: "4. <td>",
+        a: 3
+    },
+    {
+        q: "Kurš tags HTML dokumentā ir elementu konteineris, kas nosaka tabulas saturu?",
+        a1: "1. <table>",
+        a2: "2. <head>",
+        a3: "3. <form>",
+        a4: "4. <isindex>",
+        a: 1
+    },
+    {
+        q: "Kurš tags HTML dokumentā veido lapaspuses saikni ar citiem failiem?",
+        a1: "1. <thead>",
+        a2: "2. <tfoot>",
+        a3: "3. <style>",
+        a4: "4. <link>",
+        a: 4
+    },
+    {
+        q: "Kurš tags HTML dokumentā ļauj grupēt lapas vai nodalījuma virsrakstus?",
+        a1: "1. <hgroup>",
+        a2: "2. <marquee>",
+        a3: "3. <span>",
+        a4: "4. <pre>",
+        a: 1
+    },
+    {
+        q: "Kurš tags HTML dokumentā paredzēts meklēšanas indeksam?",
+        a1: "1. <isindex>",
+        a2: "2. <h1>",
+        a3: "3. <footer>",
+        a4: "4. <figcaption>",
+        a: 1
+    }
 ];
-const DATU_BAZES = [];
+const DATU_BAZES = [
+    //1 - 10
+    {
+        q: "Kurā no variantiem nav dota datu bāzu vadības sistēma?",
+        a1: "1. MySQL",
+        a2: "2. Oracle",
+        a3: "3. PHP",
+        a4: "4. MS Access",
+        a: 3
+    },
+    {
+        q: "Datu bāzu struktūras attēlošanai izmanto ER diagrammas. Ko nozīmē saīsinājums 'ER'?",
+        a1: "1. Entity relation",
+        a2: "2. Emty real",
+        a3: "3. Energy relation",
+        a4: "4. Evalution tool ",
+        a: 1
+    },
+    {
+        q: "Kuru no tabulas atribūtiem, projektējot datubāzi, parasti apzīmē ar zvaigznīti (*) vai izceļ ar pustrekniem burtiem?",
+        a1: "1. Jaunu lauku",
+        a2: "2. Saistošu jeb ārēju atslēgu",
+        a3: "3. Primāru atslēgu",
+        a4: "4. Jaunu ierakstu ",
+        a: 3
+    },
+    {
+        q: "No kā sastāv viens ieraksts Relāciju datu bāzē?",
+        a1: "1. No vairākām tabulām",
+        a2: "2. No vairākiem laukiem",
+        a3: "3. Tikai no viena lauka",
+        a4: "4. To divām šūnām",
+        a: 2
+    },
+    {
+        q: "Ko reprezentē relāciju datu bāzes tabulas rindas?",
+        a1: "1. Relācijas",
+        a2: "2. Atribūtus",
+        a3: "3. Kolonnas",
+        a4: "4. Unikālus ierakstus",
+        a: 4
+    },
+    {
+        q: "Kuru no tabulu saišu veidiem nav iespējams realizēt tiešā veidā?",
+        a1: "1. Viens pret viens",
+        a2: "2. Viens pret daudziem",
+        a3: "3. Daudzi pret daudziem",
+        a4: "4. Daudzi pret viens",
+        a: 3
+    },
+    {
+        q: "Kas ir primārā atslēga?",
+        a1: "1. Atslēga, kas seko pirms sekundāras atslēgas",
+        a2: "2. Parole datu bāzes pārbaudei",
+        a3: "3. Lauks, kas nodrošina katra ieraksta dublēšanu",
+        a4: "4. Unikāls identifikators, kuru izmanto tabulu saistībām ",
+        a: 4
+    },
+    {
+        q: "Kas ir ER modelis?",
+        a1: "1. Grafisks līdzeklis datu bāzes struktūras attēlošanai",
+        a2: "2. Datu bāzes vienas datu tabulas lauku saraksts",
+        a3: "3. Vaicājumu veidošanas loga komponente",
+        a4: "4. Informācijas plūsmas struktūra ",
+        a: 1
+    },
+    {
+        q: "Kas ir jādara, ja vaicājumā ir nepieciešams veikt datu atlasi no tabulas tā, lai viena lauka vērtības atbilstu vienlaicīgi diviem kritērijiem?",
+        a1: "1. Kritēriji ir jāraksta Criteria rindās viens zem otra",
+        a2: "2. Kritēriji ir jāraksta, starp tiem liekot loģisko operatoru OR",
+        a3: "3. Kritēriji ir jāraksta, starp tiem liekot loģisko operatoru AND",
+        a4: "4. Jāveic atlase atbilstoši vienam kritērijam, tad jānomaina kritēriji un atlase jāveic vēlreiz",
+        a: 3
+    },
+    {
+        q: "Kādas datu apkopes funkcijas var izmantot, veidojot pārskatus ar vedņa palīdzību?",
+        a1: "1. Count, Sum, Avg",
+        a2: "2. Sum, Min, Max, Multiply",
+        a3: "3. Sum, Avg, Min, Max",
+        a4: "4. Sum, Avg, Min, Max, Std",
+        a: 3
+    },
+    //11 - 20
+    {
+        q: "Kurš no objektiem nav datu bāzes objekts?",
+        a1: "1. Tabula",
+        a2: "2. Vaicājums",
+        a3: "3. Datulapa",
+        a4: "4. Atskaite",
+        a: 3
+    },
+    {
+        q: "Kurš no aprakstiem visprecīzāk apraksta relācijas datu bāzi?",
+        a1: "1. Relācijas datu bāze nodrošina veselu skaitļu saites",
+        a2: "2. Relāciju datu bāze sastāv no atsevišķām tabulām ar saistītiem datiem",
+        a3: "3. Relāciju datu bāze automātiski ievada un glabā informāciju",
+        a4: "4. Relāciju datu bāze atlasa datus ar eksistējošo vaicājumu palīdzību",
+        a: 2
+    },
+    {
+        q: "Kas ir datu bāzu vadības sistēma?",
+        a1: "1. Failu kopums, kurā glabājas dati",
+        a2: "2. Programmas līdzekļi dažādu darbību veikšanai ar datu bāzi",
+        a3: "3. Speciāla programma, paredzēta tikai datubāzu tabulu izveidei",
+        a4: "4. Programma atskaišu formēšanai ",
+        a: 2
+    },
+    {
+        q: "Kurš no šiem objektiem nodrošina datu bāzes relācijas?",
+        a1: "1. Attiecības starp tabulām",
+        a2: "2. Vaicājumu kritēriji",
+        a3: "3. Pāra attiecības starp visām tabulām",
+        a4: "4. Formas datu ievadei ",
+        a: 1
+    },
+    {
+        q: "Kāds ir primārā atslēgas lauka uzdevums?",
+        a1: "1. Izdzēsto ierakstu numuru glabāšana",
+        a2: "2. Ieraksta lauku saskaitīšana",
+        a3: "3. Ierakstu viennozīmīga identificēšana",
+        a4: "4. Tekošā ieraksta numuru glabāšana ",
+        a: 3
+    },
+    {
+        q: "Kas ir tabulas lauka indekss?",
+        a1: "1. Lauka viennozīmīgs identifikators",
+        a2: "2. Ieraksta kārtas numurs",
+        a3: "3. Lauka kārtas numurs",
+        a4: "4. Parametrs, kas paātrina datu meklēšanu un kārtošanu datu laukā",
+        a: 4
+    },
+    {
+        q: "Kāda UML diagramma norāda, kā izkatās modelis fiziskā līmenī?",
+        a1: "1. Komponentu diagramma",
+        a2: "2. Klasu diagramma",
+        a3: "3. Stāvokļu diagramma",
+        a4: "4. Ievietošanas diagramma",
+        a: 1
+    },
+    {
+        q: "Kāda UML diagramma atspoguļo mijiedarbību starp sistēmas klasēm?",
+        a1: "1. Komponenšu diagramma",
+        a2: "2. Klašu diagramma",
+        a3: "3. Stāvokļu diagramma",
+        a4: "4. Ievietošanas diagramma",
+        a: 2
+    },
+    {
+        q: "Kāda UML diagramma paredzēta atšķirīgu stāvokļu modelēšanai, kuros var atrasties objekts?",
+        a1: "1. Komponenšu diagramma",
+        a2: "2. Klašu diagramma",
+        a3: "3. Stāvokļu diagramma",
+        a4: "4. Ievietošanas diagramma",
+        a: 3
+    },
+    {
+        q: "Kāda UML diagramma rāda atšķirīgu sistēmas komponentu fizisku ievietošanu tīklā?",
+        a1: "1. Komponenšu diagramma",
+        a2: "2. Klašu diagramma",
+        a3: "3. Stāvokļu diagramma",
+        a4: "4. Ievietošanas diagramma",
+        a: 4
+    },
+    //21 - 30
+    {
+        img: "./main/images/4.21.png",
+        q: `Kāds "klients-serveris" arhitektūras veids redzams attēlā?`,
+        a1: "1. Tīkla veida",
+        a2: "2. Lietotņu",
+        a3: "3. Trīs posmu",
+        a4: `4. Parastais "klients-serveris"`,
+        a: 3
+    },
+    {
+        img: "./main/images/4.22.png",
+        q: "Kāds PDC modelis redzams attēlā?",
+        a1: "1. Virknes",
+        a2: "2. Kaskādes",
+        a3: "3. Realizācijas",
+        a4: "4. Trīs posmu",
+        a: 2
+    },
+    {
+        q: "Kas ir IS izstrādes strukturālās pieejas pamats?",
+        a1: "1. Plānošana",
+        a2: "2. Struktūrēšana",
+        a3: "3. Dekompozīcija",
+        a4: "4. Testēšana",
+        a: 3
+    },
+    {
+        q: "Kas ir entītija ER diagrammās?",
+        a1: "1. Reālais vai iedomājamais objekts, par kuru jāglabā informācija",
+        a2: "2. Informācijas avots",
+        a3: "3. Informācijas uztvērējs",
+        a4: "4. Datu krātuve",
+        a: 1
+    },
+    {
+        q: "No kāda saišu tipa ER diagrammās obligāti jāizvairās?",
+        a1: "1. Daudzi pret daudziem",
+        a2: "2. Viens pret daudziem",
+        a3: "3. Viens pret vienu",
+        a4: "4. Šāda tipa nav, var izmantot visus",
+        a: 1
+    },
+    {
+        q: "Kādās IS projektējuma diagrammās tiek izmantoti aprakstāmo elementu supertipi un apakštipi?",
+        a1: "1. Barkera ER diagrammās",
+        a2: "2. ER diagrammās pēc IDEF notācijas",
+        a3: "3. Funkcionālās diagrammās (SADT)",
+        a4: "4. Datu plūsmu diagrammās (DFD)",
+        a: 1
+    },
+    {
+        q: "Ja pēc Barkera metodes izveidotajā  ER diagrammā atribūts nozīmēts kā obligāts, tad...",
+        a1: "1. Tas nevar pieņemt nenoteikto (vai 0) vērtību",
+        a2: "2. Tas ir unikālais identifikators (Primary Key)",
+        a3: "3. Tas piemīt visām pakļautajām entītijām",
+        a4: "4. Tas piemīt vecākām entītijām",
+        a: 1
+    },
+    {
+        q: "Kas ir saites pakāpe (jauda) pēc IDEF notācijas izveidotās ER diagrammās?",
+        a1: "1. Entītijas-pēcnācējas eksemplāru skaits, kas var eksistēt katram vecāku entītijas eksemplāram",
+        a2: "2. Entītiju-pēcnācēju, kas ir saistītas ar vecāku entītiju, skaits",
+        a3: "3. Entītijas kopīgais saišu skaits ar citām entītijām",
+        a4: "4. Kopīgais saišu skaits ER diagrammā",
+        a: 1
+    },
+    {
+        q: "Kādā ERD notācijā pastāv kategoriālās saites?",
+        a1: "1. UDF notācijā",
+        a2: "2. IDEF notācijā",
+        a3: "3. SADT notācijā",
+        a4: "4. ER notācijā",
+        a: 2
+    },
+    {
+        q: "Kādā līmenī lietotājs un datu bāzes izstrādātājs apskata lietotāja problēmvides datus, atlasa nepieciešamos datus un nosaka datu savstarpējās saites?",
+        a1: "1. Loģiskajā līmenī",
+        a2: "2. Servera līmenī",
+        a3: "3. Konceptuālajā līmenī",
+        a4: "4. Fiziskajā līmenī",
+        a: 3
+    },
+    //31 - 40
+    {
+        q: "Kādā līmenī datu bāzes projektētājs realizē datu loģisko modeli konkrētai datu bāzes vadības sistēmai, iegūstot datu glabāšanas fizisko struktūru (ārējā atmiņā) definējumus?",
+        a1: "1. Loģiskajā līmenī",
+        a2: "2. Servera līmenī",
+        a3: "4. Konceptuālajā līmenī",
+        a4: "4. Fiziskajā līmenī",
+        a: 4
+    },
+    {
+        q: "Kādā līmenī datu bāzes projektētājs realizē datu loģisko modeli konkrētai datu bāzes vadības sistēmai, iegūstot datu glabāšanas fizisko struktūru (ārējā atmiņā) definējumus?",
+        a1: "1. Loģiskajā līmenī",
+        a2: "2. Servera līmenī",
+        a3: "3. Konceptuālajā līmenī",
+        a4: "4. Fiziskajā līmenī",
+        a: 1
+    },
+    {
+        q: "Shēma, kura attēlo datu bāzes datu glabāšanas struktūras objektu un to elementu aprakstu, ir...",
+        a1: "1. Datu bāzes shēma",
+        a2: "2. Datu bāzes ārējā shēma",
+        a3: "3. Datu bāzes iekšējā shēma",
+        a4: "4. Datu bāzes sistēmas eksemplārs",
+        a: 1
+    },
+    {
+        q: "Shēma, kura attēlo datu bāzes glabāšanas struktūras objektu un to elementu skatījumu no lietotāja viedokļa, ir...",
+        a1: "1. Datu bāzes shēma",
+        a2: "2. Datu bāzes ārējā shēma",
+        a3: "3. Datu bāzes iekšējā shēma",
+        a4: "4. Datu bāzes sistēmas eksemplārs",
+        a: 2
+    },
+    {
+        q: "Shēma, kura attēlo datu bāzes glabāšanas struktūras objektu un to elementu skatījumu no fiziskās realizācijas viedokļa, ir...",
+        a1: "1. Datu bāzes shēma",
+        a2: "2. Datu bāzes ārējā shēma",
+        a3: "3. Datu bāzes iekšējā shēma",
+        a4: "4. Datu bāzes sistēmas eksemplārs",
+        a: 3
+    },
+    {
+        q: "Aktivizēta datu bāzes sistēma ar piesaistīto datu bāzi ir...",
+        a1: "1. Datu bāzes shēma",
+        a2: "2. Datu bāzes ārējā shēma",
+        a3: "3. Datu bāzes iekšējā shēma",
+        a4: "4. Datu bāzes sistēmas eksemplārs",
+        a: 4
+    },
+    {
+        q: "Datu tabulām nav...",
+        a1: "1. Kolonnu (Column)",
+        a2: "2. Indeksu (Index)",
+        a3: "3. Ierobežojumu(Constraint)",
+        a4: "4. Skatu (View)",
+        a: 4
+    },
+    {
+        q: "Kādam nolūkam tabulās izmanto datu indeksus (Index)?",
+        a1: "1. Lai tabulas datus glabātu speciālā laukā",
+        a2: "2. Lai veiktu ātru datu meklēšanu",
+        a3: "3. Lai ierobežotu lietotāju piekļuvi atsevišķiem datiem",
+        a4: "4. Lai aizsargātos pret datu pazušanu",
+        a: 2
+    },
+    {
+        q: "Kādu komandu lieto, lai izveidotu datubāzi?",
+        a1: `1. CREATE TABLE "Nosaukums"`,
+        a2: `2. CREATE DATABASE "Nosaukums"`,
+        a3: `3. CREATE INDEX "Nosaukums"`,
+        a4: `4. CREATE VIEW "Nosaukums"`,
+        a: 2
+    },
+    {
+        img: "./main/images/4.40.png",
+        q: "Dotas 2 tabulas ar koku skaitu un koku sugām. Kāds apakšnosacījums jāiekļauj nosacījumā FROM, lai SQL vaicājumā savienotu abas tabulas?",
+        a1: "1. HAVING",
+        a2: "2. JOIN",
+        a3: "3. WHERE",
+        a4: "4. GROUP BY",
+        a: 2
+    },
+    //41 - 50
+    {
+        q: "Kādu funkciju veic komandas CREATE DATABASE and DROP DATABASE MySQL datubāzēs?",
+        a1: "1. CREATE izveido un DROP likvidē tabulu kopas datubāzēs",
+        a2: "2. CREATE rezervē atmiņas apgabalu un izveido datubāzes struktūras; DROP iztīra atmiņu un likvidē datubāzes struktūras",
+        a3: "3. CREATE izvedo jaunu datubāzes eksemplāru, kurā varēs izvietot jaunas datubāzes elementu tabulas, skatus u.c.; DROP likvidē datubāzes eksemplāru ar visu saturu",
+        a4: "4. CREATE izveido jaunu datubāzes eksemplāru ar visiem datubāzes elementiem tabulām, skatiem u.c.; DROP likvidē datubāzes eksemplāru ar visu saturu",
+        a: 3
+    },
+    {
+        q: "Kādu operatoru lieto, lai sakārtotu vienas vai vairāku kolonnu datus augošā vai dilstošā secībā?",
+        a1: "1. CREATE VIEW",
+        a2: "2. ORDER BY",
+        a3: "3. GROUP BY",
+        a4: "4. SELECT",
+        a: 2
+    },
+    {
+        q: "Kādu operatoru lieto, lai atlasītu visus unikālos ierakstus kolonnā  vai unikālu ierakstu kombinācijas vairākās kolonās vienlaicīgi?",
+        a1: "1. CREATE VIEW",
+        a2: "2. ORDER BY",
+        a3: "3. GROUP BY",
+        a4: "4. SELECT",
+        a: 3
+    },
+    {
+        q: "Tabulas primārā atslēga ir...",
+        a1: "1. Ieraksta unikālā atslēga, kas nodrošina datu integritāti",
+        a2: "2. Unikāls lauks vai lauku kopa, kas identificē unikālu ierakstu tabulā",
+        a3: "3. Unikāls indekss ar mērķi meklēt datus pēc dažādiem laukiem",
+        a4: "4. Unikālais indekss ir visu indeksu summa tabulā",
+        a: 2
+    },
+    {
+        q: "Kura ir datu bāzes vadības sistēma (DBVS)?",
+        a1: "1. Microsoft Office Excel",
+        a2: "2. Linux UBUNTU",
+        a3: "3. MySQL Server",
+        a4: "4. Microsoft Windows Server 2008",
+        a: 3
+    },
+    {
+        q: "Kā datubāžu vadības sistēmās (DBVS) dati tiek glabāti loģiskā līmenī?",
+        a1: "1. Indeksos",
+        a2: "2. Skatā",
+        a3: "3. Tabulās",
+        a4: "4. Failos",
+        a: 3
+    },
+    {
+        q: "Kāda operācija jālieto, lai labotu tabulas ierakstu vērtības?",
+        a1: "1. SELECT",
+        a2: "2. INSERT",
+        a3: "3. DELETE",
+        a4: "4. UPDATE",
+        a: 4
+    },
+    {
+        q: "Ar kādu operāciju var tabulā pievienot jaunu ierakstu?",
+        a1: "1. SELECT",
+        a2: "2. INSERT",
+        a3: "3. DELETE",
+        a4: "4. UPDATE",
+        a: 2
+    },
+    {
+        q: "Ar kādu operāciju var mainīt tabulas struktūru?",
+        a1: "1. CREATE",
+        a2: "2. INSERT",
+        a3: "3. ALTER",
+        a4: "4. UPDATE ",
+        a: 3
+    },
+    {
+        q: "Ar kādu operāciju tabulai var pievienot indeksu?",
+        a1: "1. CREATE",
+        a2: "2. INSERT",
+        a3: "3. ALTER",
+        a4: "4. UPDATE",
+        a: 1
+    },
+    //51 - 60
+    {
+        q: "Kādas funkcijas var izmantot SQL vaicājumos?",
+        a1: "1. Var lietot funkcijas, kuras veic matemātiskās operācijas",
+        a2: "2. Var lietot fukncijas, kuras neveic datu labošanu izpildes laikā",
+        a3: "3. Var lietot funkcijas, kuru atgriežamais tips ir tikai vesels skaitlis",
+        a4: "4. Var lietot funkcijas, kuru atgriežamais tips ir tikai teksts",
+        a: 2
+    },
+    {
+        q: "Kura nav relāciju datubāze?",
+        a1: "1. MySQL Server",
+        a2: "2. DBVS Oracle",
+        a3: "3. Microsoft Office Excel",
+        a4: "4. Microsoft SQL Server",
+        a: 3
+    },
+    {
+        img: "./main/images/4.53.png",
+        q: `Dotas 2 tabulas ar koku skaitu un koku sugām. Kādu rezultātu iegūs mainīgais "vSkaits" izpildot šo vaicājumu? SELECT SUM(skaits) INTO vSkaits FROM KOKS K JOIN KOKA_SUGA S ON K.KOKA_SUGA_ID = S.ID WHERE S.DIZKOKS IS NULL OR S.DIZKOKS = 0`,
+        a1: "1. vSkaits = 16",
+        a2: "2. vSkaits = 18",
+        a3: "3. vSkaits = 20",
+        a4: "4. vSkaits = 23",
+        a: 1
+    },
+    {
+        img: "./main/images/4.54.png",
+        q: `Dotas 2 tabulas ar koku skaitu un koku sugām. Kādu rezultātu iegūs mainīgais "vSkaits", izpildot šo vaicājumu? SELECT SUM(skaits) INTO vSkaits FROM KOKS K JOIN KOKA_SUGA S ON K.KOKA_SUGA_ID = S.ID WHERE S.NOSAUKUMS LIKE "O%"`,
+        a1: "1. vSkaits = 5",
+        a2: "2. vSkaits = 8",
+        a3: "3. vSkaits = 13",
+        a4: "4. vSkaits = 6",
+        a: 3
+    },
+    {
+        img: "./main/images/4.55.png",
+        q: `Dotas 2 tabulas ar koku skaitu un koku sugām. Kādu rezultātu iegūs mainīgais "vVertiba", izpildot zemāk aprakstīto vaicājumu? SELECT MIN(skaits) INTO vVertiba FROM KOKS K JOIN KOKA_SUGA S ON K.KOKA_SUGA_ID = S.ID WHERE S.NOSAUKUMS LIKE "%a%"`,
+        a1: "1. vVertiba = 4",
+        a2: "2. vVertiba = 5",
+        a3: "3. vVertiba = 6",
+        a4: "4. vVertiba = 2",
+        a: 2
+    },
+    {
+        img: "./main/images/4.56.png",
+        q: "Datubāzes tabulas laukam(column) vai vairākiem laukiem ir uzstādīts ierobežojums: primārā atslēga (PRIMARY KEY Constraints). Ko dod šāds ierobežojums?",
+        a1: "1. Indeksē vienu vai vairākas kolonas pēc unikalitātes principiem",
+        a2: "2. Nodrošina ieraksta unikālu identifikāciju tabulā",
+        a3: "3. Nodrošina, ka viena vai vairākas kolonnas iegūst noklusēto vērtību ar augstāku prioritāti",
+        a4: "4. Nodrošina, ka šādas kolonas nevar iegūt noklusēto vērtību",
+        a: 2
+    },
+    {
+        q: "Datubāzes tabulas laukam (column) vai vairākiem laukiem ir uzstādīts ierobežojums: unikāla atslēga (UNIQUE Constraints). Ko dod šāds ierobežojums?",
+        a1: "1. Uzliek kolonnām vērtību UNIQUE, ja netiek padotas standarta vērtības",
+        a2: "2. Vienai vai vairākām kolonnām jāatbilst noteiktam kritērijam",
+        a3: "3. Nodrošina, ka kolonnā(s) ir unikālas vērtības",
+        a4: "4. Nodrošina, ka kolonnai(ām) ir unikāli kolonnu nosaukumi",
+        a: 3
+    },
+    {
+        img: "./main/images/4.58.png",
+        q: "Dotas 2 tabulas ar koku skaits un koku sugas. Kurš SQL vaicājums atlasīs visus datus no tabulas KOKS, bet atstās tukšas vērtības kolonnā no tabulas KOKA_SUGA?",
+        a1: "1. select * from; koks k; cross join koka_suga s",
+        a2: "2. select * from; koks k; inner join koka_suga s on k.koku_suga_id = s.id",
+        a3: "3. select * from; koks k; left join koka_suga s on k.koku_suga_id = s.id",
+        a4: "4. select * from; koks k; right join koka_suga s on k.koku_suga_id = s.id",
+        a: 3
+    },
+    {
+        q: "Entītijas atribūts, ar kuru spēj to unikāli identificēt, ir…",
+        a1: "1. Primārā atslēga",
+        a2: "2. Relācija",
+        a3: "3. Datu struktūra",
+        a4: "4. Maska",
+        a: 1
+    },
+    {
+        q: "Entītijas raksturojošs elements vai aprakstoša īpašība ir...",
+        a1: "1. Atribūts",
+        a2: "2. Relācija",
+        a3: "3. Datu tips",
+        a4: "4. Klase",
+        a: 1
+    },
+    //61 - 70
+    {
+        q: "Asociācija starp dažādām entītijām ir…",
+        a1: "1. Alternatīvā atslēga",
+        a2: "2. Relācija",
+        a3: "3. UML diagrama",
+        a4: "4. Atribūts",
+        a: 2
+    },
+    {
+        img: "./main/images/4.62.png",
+        q: "Kāds ir entītiju relāciju tips?",
+        a1: "1. Nulle vai viens pret vairāk par vienu",
+        a2: "2. Viens vai vairāk pret vairāk par vienu",
+        a3: "3. Nulle, viens vai vairāk pret vairāk par vienu",
+        a4: "4. Vairāk par vienu pret tieši viens",
+        a: 3
+    },
+    {
+        q: "Cik līmeņu ir tabulu (entītes) normālformām?",
+        a1: "1. Neviens",
+        a2: "2. 10",
+        a3: "3. 3",
+        a4: "4. 5",
+        a: 4
+    },
+    {
+        img: "./main/images/4.64.png",
+        q: "Kāds modeļa tips redzams attēlā?",
+        a1: "1. Konceptuālais datu modelis",
+        a2: "2. Uz atslēgām balstītais datu modelis",
+        a3: "3. Pilnīgi izskaidrojams datu modelis ",
+        a4: "4. Normalizēts modelis",
+        a: 1
+    },
+    {
+        img: "./main/images/4.65.png",
+        q: "Kādi atribūti ir entītijai - Order?",
+        a1: "1. Order",
+        a2: "2. OrderNum, SalesPerson",
+        a3: "3. OrderNum",
+        a4: "4. Customer passport",
+        a: 2
+    },
+    {
+        img: "./main/images/4.66.png",
+        q: "Kas ir entītija Customer Passport?",
+        a1: "1. Atribūta vērtība",
+        a2: "2. Relācija",
+        a3: "3. Nosaukums",
+        a4: "4. Primārā atslēga",
+        a: 4
+    },
+    {
+        q: "Kura kardinalitāte nav normalizēta?",
+        a1: "1. Viens pret vienu",
+        a2: "2. Viens pret daudziem",
+        a3: "3. Daudzi pret daudziem",
+        a4: "4. Daudzi pret vienu",
+        a: 3
+    },
+    {
+        q: "Kurš nav datu modelēšanas rīks?",
+        a1: "1. ERWin",
+        a2: "2. Grade",
+        a3: "3. Impress",
+        a4: "4. MySQL Workbench ",
+        a: 3
+    },
+    {
+        q: "Shēma, ar kuras palīdzību grafiski attēlo funkcionālos sakarus starp datu apstrādes sistēmas elementiem, izmantojot šo elementu attēlošanai dažādas ģeometriskas figūras ar atbilstošiem uzrakstiem, ir...",
+        a1: "1. Modelis",
+        a2: "2. Algoritms",
+        a3: "3. Blokshēma",
+        a4: "4. Diagramma ",
+        a: 3
+    },
+    {
+        img: "./main/images/4.70.png",
+        q: "Kas ir redzams attēlā ?",
+        a1: "1. Datu bāzes modelis",
+        a2: "2. Klašu modelis",
+        a3: "3. Objektu modelis",
+        a4: "4. Tabulu modelis",
+        a: 1
+    }
+];
 const NORMATIVIE_AKTI = [
     //1 - 10
     {
