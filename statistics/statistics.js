@@ -16,9 +16,19 @@ statistics = {
     checkMain: (stat, quiz) => {
         document.getElementById("mainResult_" + quiz).innerHTML = `${stat}%`;
     },
+    addMedal: function(num, quiz) {
+        let statistic = document.getElementById("statistic_" + quiz);
+        console.log(num >= 50)
+        if(num === 100) return statistic.className += " cup";
+        if(num >= 90) return statistic.className += " gold";
+        if(num >= 75) return statistic.className += " silver";
+        if(num >= 50) return statistic.className += " bronze";
+    },
     create: (stats, quiz) => {
         //Send to main
         statistics.checkMain(((stats.bestResultScore / stats.quizLength) * 100).toFixed(2), quiz);
+        //Add medal
+        statistics.addMedal(Math.round((stats.bestResultScore / stats.quizLength) * 100), quiz);
         //Best Result
         document.getElementById("bestResult_" + quiz).innerHTML = `${stats.bestResultScore}/${stats.quizLength} (${((stats.bestResultScore / stats.quizLength) * 100).toFixed(2)}%)`;
         //Recent Result

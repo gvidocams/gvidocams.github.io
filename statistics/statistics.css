@@ -120,7 +120,31 @@ body {
     font-weight: bold;
     color: white;
 }
-.head:after {
+.cup::before {
+    content: "🏆";
+    float: left;
+    color: initial;
+    font-weight: initial;
+}
+.gold::before {
+    content: "🥇";
+    float: left;
+    color: initial;
+    font-weight: initial;
+}
+.silver::before {
+    content: "🥈";
+    float: left;
+    color: initial;
+    font-weight: initial;
+}
+.bronze::before {
+    content: "🥉";
+    float: left;
+    color: initial;
+    font-weight: initial;
+}
+.head::after {
     float: right;
     content: "\2191";
 }
