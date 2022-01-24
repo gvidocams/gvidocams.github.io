@@ -1,25 +1,50 @@
 let questionStorage = {
     index: 0,
     nameOfQuiz: "",
-    check: function(dataBase, dataBaseName) {
+    check: function (dataBase, dataBaseName) {
         let quiz = JSON.parse(localStorage.getItem("questionStorage"));
-        if(quiz === null) return this.create(dataBase, dataBaseName);
-        for(let i = 0; i < quiz.length; i++) {
-            if(!quiz[i].hasOwnProperty("choice")) {
+        if (quiz === null) return this.create(dataBase, dataBaseName);
+        for (let i = 0; i < quiz.length; i++) {
+            if (!quiz[i].hasOwnProperty("choice")) {
                 this.index = i;
                 return;
             }
         }
         return this.create(dataBase, dataBaseName);
     },
-    create: function(dataBase, dataBaseName) {
+    create: function (dataBase, dataBaseName) {
         this.nameOfQuiz = "statistic_" + dataBaseName;
-        window.localStorage.setItem("questionStorage", JSON.stringify([...dataBase].sort(() => Math.random() - 0.5)));
+        window.localStorage.setItem("questionStorage", JSON.stringify(this.generate(dataBase)));
         window.localStorage.setItem("info", dataBaseName);
     },
+    generate: function (questions) {
+        //Randomizing the whole question storage
+        questionsCopy = [...questions].sort(() => Math.random() - 0.5);
+        for (let i = 0; i < questionsCopy.length; i++) {
+            let currentQuestion = questionsCopy[i];
+            let answerArray = [currentQuestion.a1, currentQuestion.a2, currentQuestion.a3, currentQuestion.a4];
+            //Randomizing the array
+            let randomizedArray = [...answerArray].sort(() => Math.random() - 0.5);
+            for (let i = 1; i <= randomizedArray.length; i++) {
+                // i - 1 because arrays indexes start from 0 not 1
+                currentQuestion["a" + i] = randomizedArray[i - 1];
+            }
+            //Changing the answer number acordingly
+            for (let i = 1; i <= randomizedArray.length; i++) {
+                if (currentQuestion.a === Number(randomizedArray[i - 1].charAt(0))) {
+                    currentQuestion.a = i; break
+                }
+            }
+            //Replacing the first three characters of the answers
+            for (let i = 1; i <= 4; i++) {
+                currentQuestion["a" + i] = `${i}. ${(currentQuestion["a" + i]).slice(3)}`
+            }
+        }
+        return questionsCopy;
+    }
 }
 let quiz = {
-    callOutQuestion: function() {
+    callOutQuestion: function () {
         this.endTest();
         cosmetic.questionDefaults();
         cosmetic.questionText();
@@ -28,10 +53,10 @@ let quiz = {
         cosmetic.counter();
     },
 
-    buttonclick: function(num) {
+    buttonclick: function (num) {
 
         cosmetic.questionDisabled();
-        cosmetic.questionVisuals(JSON.parse(localStorage.getItem("questionStorage"))[questionStorage.index].a ,num);
+        cosmetic.questionVisuals(JSON.parse(localStorage.getItem("questionStorage"))[questionStorage.index].a, num);
 
         quiz.saveChoice(num);
         questionStorage.index++;
@@ -40,28 +65,28 @@ let quiz = {
 
         statistic.check();
     },
-    saveChoice: function(number) {
+    saveChoice: function (number) {
         let result = JSON.parse(localStorage.getItem("questionStorage"));
         result[questionStorage.index].choice = number;
         localStorage.setItem("questionStorage", JSON.stringify(result));
     },
-    endTest: function() {
-        if(JSON.parse(localStorage.getItem("questionStorage")).length - 1 === questionStorage.index) {
+    endTest: function () {
+        if (JSON.parse(localStorage.getItem("questionStorage")).length - 1 === questionStorage.index) {
             document.getElementById("next-button").innerHTML = "Beigt testu";
-            document.getElementById("next-button").onclick = function() {
+            document.getElementById("next-button").onclick = function () {
                 location.href = "../index.html";
             }
         }
     }
-    
+
 }
 let cosmetic = {
-    questionDefaults: function() {
+    questionDefaults: function () {
         //Enables the buttons to work properly
         document.getElementById("button1").disabled = false;
         document.getElementById("button2").disabled = false;
         document.getElementById("button3").disabled = false;
-        document.getElementById("button4").disabled = false; 
+        document.getElementById("button4").disabled = false;
         //Sets the cursor to pointer
         document.getElementById("button1").style.cursor = "pointer";
         document.getElementById("button2").style.cursor = "pointer";
@@ -84,7 +109,7 @@ let cosmetic = {
         //Sets the image value to none
         document.getElementById("image").style.display = "none"
     },
-    questionDisabled: function() {
+    questionDisabled: function () {
         //Disabled the buttons after the answer has been given
         document.getElementById("button1").disabled = true;
         document.getElementById("button2").disabled = true;
@@ -100,33 +125,33 @@ let cosmetic = {
         document.getElementById("next-button").style.cursor = "pointer";
         document.getElementById("next-button").style.color = "white";
     },
-    questionText: function() {
+    questionText: function () {
         document.getElementById("header").innerHTML = JSON.parse(localStorage.getItem("questionStorage"))[questionStorage.index].q;
         document.getElementById("button1").innerHTML = JSON.parse(localStorage.getItem("questionStorage"))[questionStorage.index].a1;
         document.getElementById("button2").innerHTML = JSON.parse(localStorage.getItem("questionStorage"))[questionStorage.index].a2;
         document.getElementById("button3").innerHTML = JSON.parse(localStorage.getItem("questionStorage"))[questionStorage.index].a3;
         document.getElementById("button4").innerHTML = JSON.parse(localStorage.getItem("questionStorage"))[questionStorage.index].a4;
     },
-    questionVisuals: function(answer, choice) {
+    questionVisuals: function (answer, choice) {
         document.getElementById("button" + answer).style.borderColor = "rgb(0, 200, 0)";
         document.getElementById("button" + answer).style.background = "rgb(0, 200, 0)";
-        if(answer !== choice) {
+        if (answer !== choice) {
             document.getElementById("button" + choice).style.borderColor = "rgb(209, 0, 0)";
             document.getElementById("button" + choice).style.background = "rgb(209, 0, 0)";
         }
     },
     progressBarWidth: 0,
-    increaseProgressBar: function() {
+    increaseProgressBar: function () {
         cosmetic.progressBarWidth = (questionStorage.index / JSON.parse(localStorage.getItem("questionStorage")).length) * 100;
         document.getElementById("myProgressBar").style.width = cosmetic.progressBarWidth + "%"
     },
-    questionImage: function() {
-        if(JSON.parse(localStorage.getItem("questionStorage"))[questionStorage.index].hasOwnProperty("img")) {
+    questionImage: function () {
+        if (JSON.parse(localStorage.getItem("questionStorage"))[questionStorage.index].hasOwnProperty("img")) {
             document.getElementById("image").style.display = "inline";
             document.getElementById("image").src = JSON.parse(localStorage.getItem("questionStorage"))[questionStorage.index].img;
         }
     },
-    counter: function() {
+    counter: function () {
         document.getElementById("questionCount").innerHTML = `Q ${questionStorage.index + 1} / ${JSON.parse(localStorage.getItem("questionStorage")).length}`;
     }
 }
@@ -134,20 +159,20 @@ let cosmetic = {
 
 let statistic = {
     storage: JSON.parse(localStorage.getItem(questionStorage.nameOfQuiz)),
-    check: function() {
-        
+    check: function () {
+
         statistic.storage = JSON.parse(localStorage.getItem(questionStorage.nameOfQuiz));
 
-        if(questionStorage.index === JSON.parse(localStorage.getItem("questionStorage")).length) {
-            if(localStorage.getItem(questionStorage.nameOfQuiz) === null) {
-                statistic.storage = {bestResultScore: 0, recentResultScore: 0, quizLength: 0, ninety: 0, seventy: 0, fifty: 0, timesCompleted: 0};
+        if (questionStorage.index === JSON.parse(localStorage.getItem("questionStorage")).length) {
+            if (localStorage.getItem(questionStorage.nameOfQuiz) === null) {
+                statistic.storage = { bestResultScore: 0, recentResultScore: 0, quizLength: 0, ninety: 0, seventy: 0, fifty: 0, timesCompleted: 0 };
 
                 localStorage.setItem(questionStorage.nameOfQuiz, JSON.stringify(this.storage));
             }
             this.statisticUpdate();
         }
     },
-    statisticUpdate: function() {
+    statisticUpdate: function () {
         this.storage.timesCompleted++;
         this.storage.quizLength = JSON.parse(localStorage.getItem("questionStorage")).length;
         this.storage.recentResultScore = this.functions.recentQuizPoints();
@@ -157,31 +182,31 @@ let statistic = {
         localStorage.setItem(questionStorage.nameOfQuiz, JSON.stringify(this.storage));
     },
     functions: {
-        recentQuizPoints: function() {
+        recentQuizPoints: function () {
             let points = 0;
             JSON.parse(localStorage.getItem("questionStorage")).forEach(question => {
-                if(question.a === question.choice) {
+                if (question.a === question.choice) {
                     return points++;
                 }
             });
             return points;
         },
-        recentQuizPercentage: function() {
+        recentQuizPercentage: function () {
             return Number(((100 / JSON.parse(localStorage.getItem("questionStorage")).length) * statistic.functions.recentQuizPoints()).toFixed(2));
         },
-        bestResult: function() {
-            if(statistic.storage.bestResultScore < statistic.functions.recentQuizPoints()) {
+        bestResult: function () {
+            if (statistic.storage.bestResultScore < statistic.functions.recentQuizPoints()) {
                 return statistic.functions.recentQuizPoints();
             } else {
                 return statistic.storage.bestResultScore;
             }
         },
-        completions: function() {
-            if(statistic.functions.recentQuizPercentage() >= 90) {
+        completions: function () {
+            if (statistic.functions.recentQuizPercentage() >= 90) {
                 return statistic.storage.ninety++;
-            } else if(statistic.functions.recentQuizPercentage() >= 70) {
+            } else if (statistic.functions.recentQuizPercentage() >= 70) {
                 return statistic.storage.seventy++;
-            } else if(statistic.functions.recentQuizPercentage() >= 50) {
+            } else if (statistic.functions.recentQuizPercentage() >= 50) {
                 return statistic.storage.fifty++;
             }
         }
@@ -198,7 +223,7 @@ const DATORU_UZBUVE = [
         a2: "2. OS - lai atpazītu iekārtu modeli",
         a3: "3. Lai ierobežotu procesora veiktspēju",
         a4: "4. Atmiņas adresācijai",
-        a: 1 
+        a: 1
     },
     {
         q: "Kur BIOS saglabā informāciju, mainot BIOS cietā diska vai COM porta uzstādījumus?",
@@ -231,7 +256,7 @@ const DATORU_UZBUVE = [
         a3: "3. Cietā diska paveids",
         a4: "4. Rezervēts atmiņas apgabals no sistēmas atmiņas",
         a: 2
-    }, 
+    },
     {
         q: "Kas notiek ar brīvpieejas atmiņas informāciju izslēdzot datoru?",
         a1: "1. Brīvpieejas atmiņas (RAM) informācija zūd",
@@ -2395,10 +2420,10 @@ const OPERETAJSISTEMAS = [
     },
     //141 - 150
     {
-        q: `Kurš apgalvojums par C:\Program Files\7-zip\7z.exe ir patiess?`,
-        a1: "1. Datne Files\7-zip\7z.exe atrodas diska C mapē Program",
-        a2: "2. Diska C mapē Program atrodas apakšmape Files\7-Zip",
-        a3: "3. Datne Zip\7z.exe atrodas diska C mapē Program Files\7",
+        q: `Kurš apgalvojums par C:&#92;Program Files&#92;7-zip&#92;7z.exe ir patiess?`,
+        a1: "1. Datne Files&#92;7-zip&#92;7z.exe atrodas diska C mapē Program",
+        a2: "2. Diska C mapē Program atrodas apakšmape Files&#92;7-Zip",
+        a3: "3. Datne Zip&#92;7z.exe atrodas diska C mapē Program Files&#92;7",
         a4: "4. Diskā C trodas mape Program Files ar apakšmapi 7-Zip",
         a: 2
     },
@@ -5144,7 +5169,7 @@ const NORMATIVIE_AKTI = [
         a2: "2. Elektroniski parakstīts apstiprinājums tam, ka elektroniskais dokuments ir noteiktā datumā un laikā nosūtīts no viena abonenta pie otra, un saņēmēja abonents to ir atvēris un izlasījis",
         a3: "3. Elektroniski parakstīts apstiprinājums tam, ka elektroniskais dokuments ir noteiktā datumā un laikā iezīmēts pie sertifikācijas pakalpojumu sniedzēja",
         a4: "4. Elektroniski parakstīts apstiprinājums tam, ka elektroniskais dokuments noteiktā datumā un laikā ir reģistrēts pie dokumenta saņēmēja",
-        a:  3
+        a: 3
     },
     {
         q: "Fizisko personu datu aizsardzības likumā ir noteikts, ka par sensitīviem var tikt uzskatīti personas dati, kuri satur informāciju par...",
