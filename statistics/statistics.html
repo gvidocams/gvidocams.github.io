@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistika</title>
+    <!--Local StyleSheet Link-->
+    <link rel="stylesheet" type="text/css" href="statistics.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="statistics.js"></script>
+</head>
+
+<body onload="statistics.display()">
+    <!--Main Script-->
+    <script src="statistics.js"></script>
+    <!--Nav Bar Script-->
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+    <!--Navigation-->
+    <div class="topnav" id="myTopnav" style="font-weight: bold;">
+        <a href="../index.html">Sākums</a>
+        <a href="../quizes/main/test.html">Testi</a>
+        <a href="#Statistika" class="active">Statistika</a>
+        <a class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <div class="main">
+        <h1>Testu Rezultātu Statistika</h1>
+        <p>Seko līdzi saviem testa rezultātiem ar statistikas palīdzību:</p>
+        <ul>
+            <li>Izseko katra testa kategorijas rezultātus, lai pārliecinātos, ka esi nokārtojis visus jautājumus;</li>
+            <li>Statistika tiek atjaunota katru reizi, kad tiek pabeigts tests;</li>
+            <li>Statistika ir pieejama pēc testa izpildes;</li>
+            <li>Viss tiek saglabāts uz lietotāja ierīces.</li>
+        </ul>
+    </div>
+    <!--Individuālo testu kopskats-->
+    <div class="container all">
+        <button class="head" id="main">Testu vispārējie rezultāti</button>
+        <div class="statistics">
+            <div class="statistic-container">
+                <p>
+                    <span><a href="#datoru_uzbuve">Datoru Uzbūve:</a></span>
+                    <span id="mainResult_DATORU_UZBŪVE">Izpildi testu</span>
+                </p>
+                <p>
+                    <span><a href="#operetajsistemas">Operētājsistēmas:</a></span>
+                    <span id="mainResult_OPERĒTĀJSISTĒMAS">Izpildi testu</span>
+                </p>
+                <p>
+                    <span><a href="#datortikli">Datortīkli:</a></span>
+                    <span id="mainResult_DATORTĪKLI">Izpildi testu</span>
+                </p>
+                <p>
+                    <span><a href="#datu_bazes">Datu Bāzes:</a></span>
+                    <span id="mainResult_DATU_BĀZES">Izpildi testu</span>
+                </p>
+                <p>
+                    <span><a href="#normativie_akti">Normatīvie Akti:</a></span>
+                    <span id="mainResult_NORMATĪVIE_AKTI">Izpildi testu</span>
+                </p>
+                <p>
+                    <span><a href="#programmesana">Programmēšana:</a></span>
+                    <span id="mainResult_PROGRAMMĒŠANA">Izpildi testu</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--Flex Konteineris-->
+    <div class="flex">
+        <!--Datoru Uzbūves Kartiņa-->
+        <div class="container">
+            <button class="head" id="statistic_DATORU_UZBŪVE">Datoru Uzbūve</button>
+            <div class="statistics">
+                <div class="statistic-container">
+                    <p>
+                        <span>Labākais rezultāts:</span>
+                        <span id="bestResult_DATORU_UZBŪVE">N/A</span>
+                    </p>
+                    <p>
+                        <span>Pēdējais rezultāts:</span>
+                        <span id="recentResult_DATORU_UZBŪVE">N/A</span>
+                    </p>
+                    <p>
+                        <span>Testi izpildīti ar &gt; 90% rezultātu:</span>
+                        <span id="ninety_DATORU_UZBŪVE">N/A</span>
+                    </p>
+                    <p>
+                        <span>Testi izpildīti ar &gt; 70% rezultātu:</span>
+                        <span id="seventy_DATORU_UZBŪVE">N/A</span>
+                    </p>
+                    <p>
+                        <span>Testi izpildīti ar &gt; 50% rezultātu:</span>
+                        <span id="fifty_DATORU_UZBŪVE">N/A</span>
+                    </p>
+                    <p>
+                        <span>Testa mēģinājumu daudzums:</span>
+                        <span id="timesCompleted_DATORU_UZBŪVE">N/A</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!--Operētājsistēmas kartiņa-->
+        <div class="container">
+            <button class="head" id="statistic_OPERĒTĀJSISTĒMAS">Operētājsistēmas</button>
+            <div class="statistics">
+                <div class="statistic-container">
+                    <p>
+                        <span>Labākais rezultāts:</span>
+                        <span id="bestResult_OPERĒTĀJSISTĒMAS">N/A</span>
+                    </p>
+                    <p>
+                        <span>Pēdējais rezultāts:</span>
+                        <span id="recentResult_OPERĒTĀJSISTĒMAS">N/A</span>
+                    </p>
+                    <p>
+                        <span>Testi izpildīti ar &gt; 90% rezultātu:</span>
+                        <span id="ninety_OPERĒTĀJSISTĒMAS">N/A</span>
+                    </p>
+                    <p>
+                        <span>Testi izpildīti ar &gt; 70% rezultātu:</span>
+                        <span id="seventy_OPERĒTĀJSISTĒMAS">N/A</span>
+                    </p>
+                    <p>
+                        <span>Testi izpildīti ar &gt; 50% rezultātu:</span>
+                        <span id="fifty_OPERĒTĀJSISTĒMAS">N/A</span>
+                    </p>
+                    <p>
+                        <span>Testa mēģinājumu daudzums:</span>
+                        <span id="timesCompleted_OPERĒTĀJSISTĒMAS">N/A</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Flex Konteineris-->
+    <div class="flex">
+        <!--Datortīklu kartiņa-->
+        <div class="container">
+            <button class="head" id="statistic_DATORTĪKLI">Datortīkli</button>
+            <div class="statistics">
+                <div class="statistic-container">
+                    <p>
+                        <span>Labākais rezultāts:</span>
+                        <span id="bestResult_DATORTĪKLI">N/A</span>
+                    </p>
+                    <p>
+                        <span>Pēdējais rezultāts:</span>
+                        <span id="recentResult_DATORTĪKLI">N/A</span>
+                    </p>
+                    <p>
+                        <span>Testi izpildīti ar &gt; 90% rezultātu:</span>
+                        <span id="ninety_Result_DATORTĪKLI">N/A</span>
+                    </p>
+                    <p>
+                        <span>Testi izpildīti ar &gt; 70% rezultātu:</span>
+                        <span id="seventy_Result_DATORTĪKLI">N/A</span>
+                    </p>
+                    <p>
+                        <span>Testi izpildīti ar &gt; 50% rezultātu:</span>
+                        <span id="fifty_DATORTĪKLI">N/A</span>
+                    </p>
+                    <p>
+                        <span>Testa mēģinājumu daudzums:</span>
+                        <span id="timesCompleted_DATORTĪKLI">N/A</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!--Datu Bāzes kartiņa-->
+        <div class="container">
+            <button class="head" id="statistic_DATU_BĀZES">Datu Bāzes</button>
+            <div class="statistics">
+                <div class="statistic-container">
+                    <p>
+                        <span>Labākais rezultāts:</span>
+                        <span id="bestResult_DATU_BĀZES">N/A</span>
+                    </p>
+                    <p>
+                        <span>Pēdējais rezultāts:</span>
+                        <span id="recentResult_DATU_BĀZES">N/A</span>
+                    </p>
+                    <p>
+                        <span>Testi izpildīti ar &gt; 90% rezultātu:</span>
+                        <span id="ninety_DATU_BĀZES">N/A</span>
+                    </p>
+                    <p>
+                        <span>Testi izpildīti ar &gt; 70% rezultātu:</span>
+                        <span id="seventy_DATU_BĀZES">N/A</span>
+                    </p>
+                    <p>
+                        <span>Testi izpildīti ar &gt; 50% rezultātu:</span>
+                        <span id="fifty_DATU_BĀZES">N/A</span>
+                    </p>
+                    <p>
+                        <span>Testa mēģinājumu daudzums:</span>
+                        <span id="timesCompleted_DATU_BĀZES">N/A</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Flex Konteineris-->
+    <div class="flex">
+        <!--Normatīvo aktu kartiņa-->
+        <div class="container">
+            <button class="head" id="statistic_NORMATĪVIE_AKTI">Normatīvie Akti</button>
+            <div class="statistics">
+                <div class="statistic-container">
+                    <p>
+                        <span>Labākais rezultāts:</span>
+                        <span id="bestResult_NORMATĪVIE_AKTI">N/A</span>
+                    </p>
+                    <p>
+                        <span>Pēdējais rezultāts:</span>
+                        <span id="recentResult_NORMATĪVIE_AKTI">N/A</span>
+                    </p>
+                    <p>
+                        <span>Testi izpildīti ar &gt; 90% rezultātu:</span>
+                        <span id="ninety_NORMATĪVIE_AKTI">N/A</span>
+                    </p>
+                    <p>
+                        <span>Testi izpildīti ar &gt; 70% rezultātu:</span>
+                        <span id="seventy_NORMATĪVIE_AKTI">N/A</span>
+                    </p>
+                    <p>
+                        <span>Testi izpildīti ar &gt; 50% rezultātu:</span>
+                        <span id="fifty_NORMATĪVIE_AKTI">N/A</span>
+                    </p>
+                    <p>
+                        <span>Testa mēģinājumu daudzums:</span>
+                        <span id="timesCompleted_NORMATĪVIE_AKTI">N/A</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!--Programmēšanas kartiņa-->
+        <div class="container">
+            <button class="head" id="statistic_PROGRAMMĒŠANA">Programmēšana</button>
+            <div class="statistics">
+                <div class="statistic-container">
+                    <p>
+                        <span>Labākais rezultāts:</span>
+                        <span id="bestResult_PROGRAMMĒŠANA">N/A</span>
+                    </p>
+                    <p>
+                        <span>Pēdējais rezultāts:</span>
+                        <span id="recentResult_PROGRAMMĒŠANA">N/A</span>
+                    </p>
+                    <p>
+                        <span>Testi izpildīti ar &gt; 90% rezultātu:</span>
+                        <span id="ninety_PROGRAMMĒŠANA">N/A</span>
+                    </p>
+                    <p>
+                        <span>Testi izpildīti ar &gt; 70% rezultātu:</span>
+                        <span id="seventy_PROGRAMMĒŠANA">N/A</span>
+                    </p>
+                    <p>
+                        <span>Testi izpildīti ar &gt; 50% rezultātu:</span>
+                        <span id="fifty_PROGRAMMĒŠANA">N/A</span>
+                    </p>
+                    <p>
+                        <span>Testa mēģinājumu daudzums:</span>
+                        <span id="timesCompleted_PROGRAMMĒŠANA">N/A</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Skripts priekš collapsible elementiem-->
+    <script>
+        var coll = document.getElementsByClassName("head");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active-head");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

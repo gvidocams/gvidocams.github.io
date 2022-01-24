@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Datoru Uzbūves Tests</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body onload="questionStorage.check(NORMATIVIE_AKTI, `NORMATIVIE_AKTI`); quiz.callOutQuestion()" class="quiz">
+    <!--Main Quiz Script-->
+    <script src="main/quiz.js"></script>
+    <!--Navigation Script-->
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+    <!--Navigation-->
+    <div class="topnav" id="myTopnav" style="font-weight: bold;">
+        <a href="#" class="active">Normatīve Akti</a>
+        <a href="../index.html">Sākums</a>
+        <a href="../quizes/main/test.html">Testi</a>
+        <a href="../statistics/statistics.html">Statistika</a>
+        <a class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <!--Main Quiz-->
+    <div class="wrapper">
+        <div class="header">
+            <h1 id="header"></h1>
+        </div>
+        <div class="answerWrapper">
+            <div class="answerButtonWrapper">
+                <img id="image">
+            </div>
+            <div class="answerButtonWrapper">
+                <button class="answerButton" id="button1" onclick="quiz.buttonclick(1)"></button>
+            </div>
+            <div class="answerButtonWrapper">
+                <button class="answerButton" id="button2" onclick="quiz.buttonclick(2)"></button>
+            </div>
+            <div class="answerButtonWrapper">
+                <button class="answerButton" id="button3" onclick="quiz.buttonclick(3)"></button>
+            </div>
+            <div class="answerButtonWrapper">
+                <button class="answerButton" id="button4" onclick="quiz.buttonclick(4)"></button>
+            </div>
+            <div class="answerButtonWrapper">
+                <button class="nextButton" onclick="quiz.callOutQuestion()" id="next-button">Nākamais tests
+                    &#62;&#62;</button>
+            </div>
+        </div>
+        <div class="info">
+            <p id="questionCount">Q 1/10</p>
+        </div>
+        <div class="progressBar">
+            <div id="myProgressBar"></div>
+        </div>
+    </div>
+</body>
+
+</html>
