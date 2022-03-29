@@ -3,16 +3,18 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Datoru Uzbūves Tests</title>
+    <title>Normatīvo Aktu Tests</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../styles/quiz.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body onload="questionStorage.check(NORMATIVIE_AKTI, `NORMATIVIE_AKTI`); quiz.callOutQuestion()" class="quiz">
+    <!--Question Storage-->
+    <script src="../scripts/questions.js"></script>
     <!--Main Quiz Script-->
-    <script src="main/quiz.js"></script>
+    <script src="../scripts/quiz.js" defer></script>
     <!--Navigation Script-->
     <script>
         function myFunction() {
@@ -28,8 +30,8 @@
     <div class="topnav" id="myTopnav" style="font-weight: bold;">
         <a href="#" class="active">Normatīve Akti</a>
         <a href="../index.html">Sākums</a>
-        <a href="../quizes/main/test.html">Testi</a>
-        <a href="../statistics/statistics.html">Statistika</a>
+        <a href="../catalog.html">Testi</a>
+        <a href="../statistics.html">Statistika</a>
         <a class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
         </a>

@@ -3,18 +3,18 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Datu Bāzu Tests</title>
+    <title>Vājību Tests</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/quiz.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body onload="questionStorage.check(DATU_BAZES, `DATU_BAZES`); quiz.callOutQuestion()" class="quiz">
+<body onload="questionStorage.check(); quiz.callOutQuestion()" class="quiz">
     <!--Question Storage-->
     <script src="../scripts/questions.js"></script>
     <!--Main Quiz Script-->
-    <script src="../scripts/quiz.js" defer></script>
+    <script src="../scripts/exam.js" defer></script>
     <!--Navigation Script-->
     <script>
         function myFunction() {
@@ -28,7 +28,7 @@
     </script>
     <!--Navigation-->
     <div class="topnav" id="myTopnav" style="font-weight: bold;">
-        <a href="#" class="active">Datu Bāzes</a>
+        <a href="#" class="active">Testa Versija</a>
         <a href="../index.html">Sākums</a>
         <a href="../catalog.html">Testi</a>
         <a href="../statistics.html">Statistika</a>
@@ -58,7 +58,8 @@
                 <button class="answerButton" id="button4" onclick="quiz.buttonclick(4)"></button>
             </div>
             <div class="answerButtonWrapper">
-                <button class="nextButton" onclick="quiz.callOutQuestion()" id="next-button">Nākamais tests &#62;&#62;</button>
+                <button class="nextButton" onclick="quiz.callOutQuestion()" id="next-button">Nākamais tests
+                    &#62;&#62;</button>
             </div>
         </div>
         <div class="info">
