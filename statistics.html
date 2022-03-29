@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistika</title>
+    <!--Local StyleSheet Link-->
+    <link rel="stylesheet" type="text/css" href="./styles/statistics.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="statistics.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F2JQTEBGTQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-F2JQTEBGTQ');
+    </script>
+
+</head>
+
+<body onload="statistics.display()">
+    <!--Main Script-->
+    <script src="statistics.js"></script>
+    <!--Nav Bar Script-->
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+    <!--Navigation-->
+    <div class="topnav" id="myTopnav" style="font-weight: bold;">
+        <a href="../index.html">Sākums</a>
+        <a href="../quizes/main/test.html">Testi</a>
+        <a href="#Statistika" class="active">Statistika</a>
+        <a class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <div class="main">
+        <h1>Testu Rezultātu Statistika</h1>
+        <p>Seko līdzi saviem testa rezultātiem ar statistikas palīdzību:</p>
+        <ul>
+            <li>Izseko katra testa kategorijas rezultātus, lai pārliecinātos, ka esi nokārtojis visus jautājumus;</li>
+            <li>Statistika tiek atjaunota katru reizi, kad tiek pabeigts tests;</li>
+            <li>Statistika ir pieejama pēc testa izpildes;</li>
+            <li>Viss tiek saglabāts uz lietotāja ierīces.</li>
+        </ul>
+    </div>
+    <!--Datoru Uzbūves Kartiņa-->
+    <div class="container">
+        <button class="head" id="statistic_DATORU_UZBŪVE">Datoru Uzbūve</button>
+        <div class="statistics">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam nobis quae cupiditate excepturi
+                    mollitia nostrum sit et ipsum iusto! Neque facere quo ipsam quisquam fugiat ut repudiandae?
+                    Assumenda, accusamus iusto.</p>
+        </div>
+    </div>
+    <!--Operētājsistēmas kartiņa-->
+    <div class="container">
+        <button class="head" id="statistic_OPERĒTĀJSISTĒMAS">Operētājsistēmas</button>
+        <div class="statistics">
+            <div class="statistic-container">
+                <p>
+                    <span>Labākais rezultāts:</span>
+                    <span id="bestResult_OPERĒTĀJSISTĒMAS">N/A</span>
+                </p>
+                <p>
+                    <span>Pēdējais rezultāts:</span>
+                    <span id="recentResult_OPERĒTĀJSISTĒMAS">N/A</span>
+                </p>
+                <p>
+                    <span>Testi izpildīti ar &gt; 90% rezultātu:</span>
+                    <span id="ninety_OPERĒTĀJSISTĒMAS">N/A</span>
+                </p>
+                <p>
+                    <span>Testi izpildīti ar &gt; 70% rezultātu:</span>
+                    <span id="seventy_OPERĒTĀJSISTĒMAS">N/A</span>
+                </p>
+                <p>
+                    <span>Testi izpildīti ar &gt; 50% rezultātu:</span>
+                    <span id="fifty_OPERĒTĀJSISTĒMAS">N/A</span>
+                </p>
+                <p>
+                    <span>Testa mēģinājumu daudzums:</span>
+                    <span id="timesCompleted_OPERĒTĀJSISTĒMAS">N/A</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!--Skripts priekš collapsible elementiem-->
+    <script>
+        var coll = document.getElementsByClassName("head");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active-head");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
