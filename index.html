@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Sākums</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="./styles/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F2JQTEBGTQ"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-F2JQTEBGTQ');
+  </script>
+  
+</head>
+
+<body onload="main.check()">
+  <!--Main Script Link-->
+  <script src="index.js"></script>
+  <!--Nav Bar Script-->
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script>
+  <!--Navigation-->
+  <div class="topnav" id="myTopnav" style="font-weight: bold;">
+    <a href="#sākums" class="active">Sākums</a>
+    <a href="catalog.html">Testi</a>
+    <a href="statistics.html">Statistika</a>
+    <a class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  <!--Main Header-->
+  <article class="main">
+    <h1>Atbilžu variantu viktorīna</h1>
+    <p style="text-align: center;"><b>Vienkārša</b> aplikācija viktorīnas sagatavošanai, kura ir lokāli bāzēta.</p>
+  </article>
+  <!--Test Header-->
+  <article class="main">
+    <div class="flex">
+      <div class="flex-container">
+        <h1>Testi</h1>
+      </div>
+      <div class="flex-container">
+        <p>Sagatavojies eksāmenam ar iepriekš sagatavotiem testiem un pie reizes arī mācies no kļūdām :)</p>
+        <p>Pamēģini visus testus dabūt dzeltenus.</p>
+        <p style="font-size: 30px; text-align: center;"><b>(>_>)</b></p>
+      </div>
+    </div>
+    <div class="button-container">
+      <button onclick="window.location.href='catalog.html'">Visi Testi</button>
+    </div>
+  </article>
+  <!--Statistic Header-->
+  <article class="main">
+    <div class="flex">
+      <div class="content">
+        <h1>Statistika</h1>
+        <p>Seko līdzi testa rezultātiem ar statistikas palīdzību un nepalaid garām nevienu neatbildētu jautājumu.</p>
+      </div>
+      <h3 id="hint">Izpildi testu, lai redzētu rezultātu</h3>
+      <div class="statistic" id="statistic">
+        <h3>Nesen izpildītā testa rezultāti:</h3>
+        <p>
+          <span>Tests:</span>
+          <span id="name">N/A</span>
+        </p>
+        <p>
+          <span>Statuss:</span>
+          <span id="status">N/A</span>
+        </p>
+        <p>
+          <span id="operator">Izpildīti:</span>
+          <span id="count">N/A</span>
+        </p>
+      </div>
+    </div>
+  </article>
+</body>
+
+</html>

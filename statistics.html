@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistika</title>
+    <!--Local StyleSheet Link-->
+    <link rel="stylesheet" type="text/css" href="./styles/statistics.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="statistics.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F2JQTEBGTQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-F2JQTEBGTQ');
+    </script>
+
+</head>
+
+<body>
+    <!--Nav Bar Script-->
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+    <!--Navigation-->
+    <div class="topnav" id="myTopnav" style="font-weight: bold;">
+        <a href="./index.html">Sākums</a>
+        <a href="./catalog.html">Testi</a>
+        <a href="#Statistika" class="active">Statistika</a>
+        <a class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <div class="main" id="main">
+        <h1>Testu Rezultātu Vēsture</h1>
+        <p>Seko līdzi saviem testa rezultātiem ar vēstures palīdzību:</p>
+        <ul>
+            <li>Izseko katra izpildītā testa rezultātus un seko līdzi kļūdu grupējumiem, lai zinātu pie kā piemācīties
+                klāt :)</li>
+            <li>Statistika tiek atjaunota katru reizi, kad tiek pabeigts tests;</li>
+            <li>Statistika ir pieejama pēc testa izpildes;</li>
+            <li>Viss tiek saglabāts uz lietotāja ierīces.</li>
+        </ul>
+    </div>
+    <!--Datoru Uzbūves Kartiņa-->
+    <div id="history">
+        <div class="container">
+            <button class="head" id="name">Datoru Uzbūve</button>
+            <div class="statistics">
+                <p>
+                    <span>Datums:</span>
+                    <span id="date">N/A</span>
+                </p>
+                <p>
+                    <span>Rezultāts:</span>
+                    <span id="result">N/A</span>
+                </p>
+                <p>
+                    <span>Izpildes laiks:</span>
+                    <span id="time">N/A</span>
+                </p>
+                <h3>Pieļautās kļūdas:</h3>
+                <div class="insights">
+                    <ul>
+                        <li>Termini: 4/5</li>
+                        <li>Darba drošība: 2/5</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Skripts priekš collapsible elementiem-->
+    <script defer>
+        var coll = document.getElementsByClassName("head");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active-head");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+    <!--Main Script-->
+    <script src="./scripts/statistics.js" defer></script>
+</body>
+
+</html>

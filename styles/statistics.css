@@ -1,0 +1,237 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    overflow-x: hidden;
+    background-color:rgb(19, 19, 19);
+    margin: 0;
+    
+    font-family: Arial, sans-serif;
+    transition: 0.4s;
+}
+/*Navigācijas lauka stila elementi*/  
+.topnav {
+    overflow: hidden;
+    background-color: #212529;
+}  
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.topnav a.active {
+    background-color: rgb(0, 168, 235);
+    color: white;
+}  
+.topnav .icon {
+    display: none;
+}
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+}
+@media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+}
+/*Main Style Elements*/
+.main {
+    width: 90vw;
+    margin: 0 auto;
+
+    border-radius: 7px;
+    background-color: rgb(27, 27, 27);
+}
+.main h1 {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+}
+.main p {
+    color: gray;
+    font-size: 18px;
+    margin: 0px;
+    padding: 0px 15px 15px 15px;
+}
+.main ul {
+    padding: 5px 15px 15px 25px;
+    margin-top: 0px;
+    list-style: none;
+}
+.main ul li {
+    padding: 5px 10px;
+    color: gray;
+}
+.main ul li::before {
+    content: "\2022";
+    color:rgb(0, 168, 235);
+    font-weight: bold;
+    font-size: 20px;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+}
+/*Container Style Elements*/
+.container {
+    width: 90vw;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+/*Header Style Elements*/
+.head {
+    background-color: rgb(27, 27, 27);
+
+    width: 90vw;
+    padding: 15px;
+
+    font-size: 30px;
+    text-align: left;
+
+    border-radius: 7px 7px 0px 0px;
+    border: none;
+
+    cursor: pointer;
+
+    font-weight: bold;
+    color: white;
+}
+.head::after {
+    float: right;
+    content: "\2191";
+}
+.active-head, .head:hover {
+    background-color:#212529;
+}
+.active-head:after {
+    content: "\2193";
+}
+.head[disabled] {
+    opacity: 0.5;
+}
+.head[disabled]:hover {
+    background-color: rgb(27, 27, 27);
+}
+/*Individual Statistic Style Elements*/
+.statistics {
+    width: 90wv;
+    background-color: rgb(27, 27, 27);
+    
+    
+    border-radius: 0px 0px 7px 7px;
+    
+    line-height: 30px;
+
+    /*max-height: 0;*/
+    overflow: hidden;
+    transition: max-height 0.2s ease;
+}
+
+.statistics p {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 0px;
+    padding: 5px 0px;
+
+    color: white;
+}
+
+.statistics p span {
+    font-size: 16px;
+    padding: 0px 15px 0px 15px;
+}
+.statistics h3 {
+    padding: 0px 15px 0px 30px;
+    margin: 5px 0;
+    color: white;
+}
+.insights {
+    padding: 0px 15px 0px 30px;
+}
+.insights ul {
+    margin: 0;
+    padding: 0px 15px 15px 30px;
+    color: white;
+    list-style-type: square;    
+}
+@media screen and (min-width: 700px) {
+    /*Regular Statistic Elements*/
+    .head {
+        width: 90vw;
+        height: 90px;
+    }
+    .statistics {
+        width: 90vw;
+    }       
+    /*Main Statistic Elements*/
+    .all .head {
+        width: 90vw;
+        cursor: initial;
+    }
+    .all .head:after{
+        content: "\2193";
+    }
+    .all .active-head, #main:hover {
+        background-color: rgb(27, 27, 27);
+    }
+    .all .statistics {
+        width: 90vw;
+        max-height: max-content;
+    }
+    /*Flex Konteineris*/
+    .flex {
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        width: 90vw;
+    }
+    .flex .container {
+        margin: 0px 0px 15px 0px;
+        width: 44vw;
+    }
+}
+@media screen and (min-width: 1400px) {
+    /*Main Statistic Elements*/
+    .main {
+        width: 1260px;
+        font-size: 19px;
+    }
+    .main p {
+        font-size: 22px;
+    }
+    /*All The Time Open Container*/
+    .container {
+        width: 1260px;
+    }
+    .head {
+        width: 1260px;
+    }
+    .statistics {
+        width: 1260px;
+    }
+}

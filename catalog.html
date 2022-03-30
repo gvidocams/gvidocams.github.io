@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta lang="LV">
+  <title>Testu katalogs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="./styles/catalog.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F2JQTEBGTQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-F2JQTEBGTQ');
+  </script>
+
+</head>
+
+<body onload="failSafe.check()">
+  <!--Navigation Script-->
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script>
+  <!--Navigation-->
+  <div class="topnav" id="myTopnav" style="font-weight: bold;">
+    <a href="index.html">Sākums</a>
+    <a href="#Testi" class="active">Testi</a>
+    <a href="statistics.html">Statistika</a>
+    <a class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  <!--FailSafe Script-->
+  <script src="./scripts/catalog.js"></script>
+  <!--Failsafe-->
+  <article class="main" id="info">
+    <h1 id="failsafe"><i class="fa fa-exclamation-triangle" aria-hidden="true" style="color: red;"></i> Neizpildīts
+      tests</h1>
+    <p>Testa nosaukums: <span id="name"></span></p>
+    <p>Atbildētie testa jautājumi: <span id="count"></span></p>
+    <div class="button-container">
+      <button id="continue">Turpināt...</button>
+      <button id="erase" onclick="failSafe.erase()">Nodzēst...</button>
+    </div>
+  </article>
+  <!--Main Header-->
+  <article class="main">
+    <h1>Testu Katalogs</h1>
+    <p>Izvēlies sev vispiemērotāko testu un mēģini nokārtot to uz 100%. Jau izdarīji to? Pamēģini nokārtot pilnībā visus
+      :)))</p>
+    <p>Par testiem:</p>
+    <ul>
+      <li>Statistika attiecīgajam testam atjaunojas tikai tad, kad esi atbildējis uz visiem jautājumiem;</li>
+      <li>Tests pēc lapas atsvaidzināšanas netiek atjaunots, bet gan saglabāts un tiek pārcelts uz nākamo neatbildēto
+        jautājumu;</li>
+      <li>Pēc katras atblides iesniegšanas ir iespējams redzēt pareizo atbildi.</li>
+    </ul>
+  </article>
+  <!--Testa Versijas-->
+  <!--Vājību pārbaude-->
+  <div class="flex">
+    <article class="container">
+      <button class="head working">Eksāmens</button>
+      <div class="content">
+        <p><i class="fa fa-clock-o" aria-hidden="true" style="padding-top: 10px"></i> Vidējais izpildes laiks: 80 min
+        </p>
+        <p><i class="fa fa-question-circle" aria-hidden="true"></i> Jautājumu skaits: 70</p>
+        <p>Grūtības pakāpe:</p>
+        <p><i class="fa fa-certificate" aria-hidden="true" style="color: rgb(0, 255, 0)"></i> <i
+          class="fa fa-certificate" aria-hidden="true" style="color: rgb(0, 255, 0)"></i> <i class="fa fa-certificate"
+          aria-hidden="true" style="color: rgb(238, 255, 0)"></i> <i class="fa fa-certificate" aria-hidden="true"
+          style="color: rgb(238, 255, 0)"></i> <i class="fa fa-certificate" aria-hidden="true"
+          style="color: rgb(255, 0, 0)"></i></p>
+        <div class="button-container">
+          <button onclick="window.location.href='./quizes/EXAM.html'">Pildīt Testu</button>
+        </div>
+      </div>
+    </article>
+    <!--Testa kontrole-->
+    <article class="container">
+      <button class="head working">Mini-Eksāmens</button>
+      <div class="content">
+        <p><i class="fa fa-clock-o" aria-hidden="true" style="padding-top: 10px"></i> Vidējais izpildes laiks: 40 min
+        </p>
+        <p><i class="fa fa-question-circle" aria-hidden="true"></i> Jautājumu skaits: 35</p>
+        <p>Grūtības pakāpe:</p>
+        <p><i class="fa fa-certificate" aria-hidden="true" style="color: rgb(0, 255, 0)"></i> <i
+            class="fa fa-certificate" aria-hidden="true" style="color: rgb(0, 255, 0)"></i> <i class="fa fa-certificate"
+            aria-hidden="true" style="color: rgb(238, 255, 0)"></i> <i class="fa fa-certificate" aria-hidden="true"></i> <i class="fa fa-certificate" aria-hidden="true"></i></p>
+        <div class="button-container">
+          <button onclick="window.location.href='./quizes/MINIEXAM.html'">Pildīt Testu</button>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <!--Datoru Uzbuves Card-->
+  <div class="flex">
+    <article class="container">
+      <button class="head working">Datoru Uzbūve</button>
+      <div class="content">
+        <p><i class="fa fa-clock-o" aria-hidden="true" style="padding-top: 10px"></i> Vidējais izpildes laiks: 20 min
+        </p>
+        <p><i class="fa fa-question-circle" aria-hidden="true"></i> Jautājumu skaits: 130</p>
+        <p>Grūtības pakāpe:</p>
+        <p><i class="fa fa-certificate" aria-hidden="true" style="color: rgb(0, 255, 0)"></i> <i
+            class="fa fa-certificate" aria-hidden="true" style="color: rgb(0, 255, 0)"></i> <i class="fa fa-certificate"
+            aria-hidden="true" style="color: rgb(238, 255, 0)"></i> <i class="fa fa-certificate" aria-hidden="true"></i>
+          <i class="fa fa-certificate" aria-hidden="true"></i></p>
+        <div class="button-container">
+          <button onclick="window.location.href='./quizes/DATORU_UZBUVE.html'">Pildīt Testu</button>
+        </div>
+      </div>
+    </article>
+    <!--Operetajsistēmas Card-->
+    <article class="container">
+      <button class="head working">Operetajsistēmas</button>
+      <div class="content">
+        <p><i class="fa fa-clock-o" aria-hidden="true" style="padding-top: 10px"></i> Vidējais izpildes laiks: 25 min
+        </p>
+        <p><i class="fa fa-question-circle" aria-hidden="true"></i> Jautājumu skaits: 170</p>
+        <p>Grūtības pakāpe:</p>
+        <p><i class="fa fa-certificate" aria-hidden="true" style="color: rgb(0, 255, 0)"></i> <i
+            class="fa fa-certificate" aria-hidden="true" style="color: rgb(0, 255, 0)"></i> <i class="fa fa-certificate"
+            aria-hidden="true" style="color: rgb(238, 255, 0)"></i> <i class="fa fa-certificate" aria-hidden="true"
+            style="color: rgb(238, 255, 0)"></i> <i class="fa fa-certificate" aria-hidden="true"></i></p>
+        <div class="button-container">
+          <button onclick="window.location.href='./quizes/OPERETAJSISTEMAS.html'">Pildīt Testu</button>
+        </div>
+      </div>
+    </article>
+  </div>
+  <!--Datortikli Card-->
+  <div class="flex">
+    <article class="container">
+      <button class="head working">Datortīkli</button>
+      <div class="content">
+        <p><i class="fa fa-clock-o" aria-hidden="true" style="padding-top: 10px"></i> Vidējais izpildes laiks: 35 min
+        </p>
+        <p><i class="fa fa-question-circle" aria-hidden="true"></i> Jautājumu skaits: 210</p>
+        <p>Grūtības pakāpe:</p>
+        <p><i class="fa fa-certificate" aria-hidden="true" style="color: rgb(0, 255, 0)"></i> <i
+            class="fa fa-certificate" aria-hidden="true" style="color: rgb(0, 255, 0)"></i> <i class="fa fa-certificate"
+            aria-hidden="true" style="color: rgb(238, 255, 0)"></i> <i class="fa fa-certificate" aria-hidden="true"
+            style="color: rgb(238, 255, 0)"></i> <i class="fa fa-certificate" aria-hidden="true"
+            style="color: rgb(255, 0, 0)"></i></p>
+        <div class="button-container">
+          <button onclick="window.location.href='./quizes/DATORTIKLI.html'">Pildīt Testu</button>
+        </div>
+      </div>
+    </article>
+    <!--Datu Bazes Card-->
+    <article class="container">
+      <button class="head working">Datu Bāzes</button>
+      <div class="content">
+        <p><i class="fa fa-clock-o" aria-hidden="true" style="padding-top: 10px"></i> Vidējais izpildes laiks: 10 min
+        </p>
+        <p><i class="fa fa-question-circle" aria-hidden="true"></i> Jautājumu skaits: 70</p>
+        <p>Grūtības pakāpe:</p>
+        <p><i class="fa fa-certificate" aria-hidden="true" style="color: rgb(0, 255, 0)"></i> <i
+            class="fa fa-certificate" aria-hidden="true" style="color: rgb(0, 255, 0)"></i> <i class="fa fa-certificate"
+            aria-hidden="true"></i> <i class="fa fa-certificate" aria-hidden="true"></i> <i class="fa fa-certificate"
+            aria-hidden="true"></i></p>
+        <div class="button-container">
+          <button onclick="window.location.href='./quizes/DATU_BAZES.html'">Pildīt Testu</button>
+        </div>
+      </div>
+    </article>
+  </div>
+  <!--Normativie Akti Card-->
+  <div class="flex">
+    <article class="container">
+      <button class="head working">Normatīvie Akti</button>
+      <div class="content">
+        <p><i class="fa fa-clock-o" aria-hidden="true" style="padding-top: 10px"></i> Vidējais izpildes laiks: 13 min
+        </p>
+        <p><i class="fa fa-question-circle" aria-hidden="true"></i> Jautājumu skaits: 80</p>
+        <p>Grūtības pakāpe:</p>
+        <p><i class="fa fa-certificate" aria-hidden="true" style="color: rgb(0, 255, 0)"></i> <i
+            class="fa fa-certificate" aria-hidden="true" style="color: rgb(0, 255, 0)"></i> <i class="fa fa-certificate"
+            aria-hidden="true"></i> <i class="fa fa-certificate" aria-hidden="true"></i> <i class="fa fa-certificate"
+            aria-hidden="true"></i></p>
+        <div class="button-container">
+          <button onclick="window.location.href='./quizes/NORMATIVIE_AKTI.html'">Pildīt Testu</button>
+        </div>
+      </div>
+    </article>
+    <!--Programmesana Card-->
+    <article class="container">
+      <button class="head working">Programmēšana</button>
+      <div class="content">
+        <p><i class="fa fa-clock-o" aria-hidden="true" style="padding-top: 10px"></i> Vidējais izpildes laiks: 6 min
+        </p>
+        <p><i class="fa fa-question-circle" aria-hidden="true"></i> Jautājumu skaits: 40</p>
+        <p>Grūtības pakāpe:</p>
+        <p><i class="fa fa-certificate" aria-hidden="true" style="color: rgb(0, 255, 0)"></i> <i
+            class="fa fa-certificate" aria-hidden="true"></i> <i class="fa fa-certificate" aria-hidden="true"></i> <i
+            class="fa fa-certificate" aria-hidden="true"></i> <i class="fa fa-certificate" aria-hidden="true"></i></p>
+        <div class="button-container">
+          <button onclick="window.location.href='./quizes/PROGRAMMESANA.html'">Pildīt Testu</button>
+        </div>
+      </div>
+    </article>
+  </div>
+  <!--Script For Collapsibles-->
+  <script>
+    var coll = document.getElementsByClassName("head");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function () {
+        this.classList.toggle("active-head");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>
